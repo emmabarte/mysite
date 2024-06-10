@@ -6,6 +6,8 @@ List of User
 
 {% block content %}
 
+{% include "Include/navbar.html" %}
+
     <a href="/user/create" class="btn btn-primary float-end mt-1 me-1">Add Gender</a>
     {% include "include/messages.html" %}
     <div class="col-md-6 mx-auto ">
@@ -24,16 +26,16 @@ List of User
            <tbody>
                 {% for user in users %}
                    <tr>
-                      <td>{{ user.user_id}}</td>
-                      <td>{{ user.first_name}}</td>
-                      <td>{{ user.middle_name}}</td>
-                      <td>{{ user.last_name}}</td>
-                      <td>{{ user.gender}}</td>
+                      <td>{{user.user_id}}</td>
+                      <td>{{user.first_name}}</td>
+                      <td>{{user.date_created}}</td>
+                      <td>{{user.date_updated}}</td>
+                      <td>{{user.gender_id}}</td>
                       <td>
                           <div class="btn-group">
-                          <a href="#" class="btn btn-primary">View</a>
-                          <a href="#" class="btn btn-success">Edit</a>
-                          <a href="#" class="btn btn-danger">Delete</a>
+                          <a href="/user/show/{{user.user_id}}" class="btn btn-primary">View</a>
+                          <a href="/user/edit/{{user.user_id}}" class="btn btn-success">Edit</a>
+                          <a href="/user/delete/{{user.user_id}}" class="btn btn-danger">Delete</a>
                       </td>
                   </tr>
                 {% endfor %}

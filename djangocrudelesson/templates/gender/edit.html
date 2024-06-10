@@ -6,8 +6,8 @@ Edit Gender
  
 {% block content %}
 
-<div class="col-md-4 mx-auto ">
-<form action="/gender/update/{{ gender.gender_id }}" method="post">
+<div class="col-md-4 mx-auto mt-3 ">
+<form action="/gender/update/{{gender.gender_id}}" method="post">
     {% csrf_token %}
     <div class="mb-3">
         <label for="gender">Gender</label>

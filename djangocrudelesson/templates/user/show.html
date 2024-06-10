@@ -1,0 +1,56 @@
+{% extends "layout/base.html" %}
+
+{% block title %}
+View User
+{% endblock title %}
+
+{% block content %}
+
+<div class="col-md-4 mx-auto mt-3 ">
+    <form action="/user/update/{{user.user_id}}" method="post">
+        <div class="mb-3">
+            <label for="user">First Name</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.first_name}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Middle Name</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.middle_name}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Last Name</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.last_name}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Age</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.age}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Birth Date</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.birth_date}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Gender</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.gender}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Username</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.username}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">Password</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.password}}" readonly />
+         </div>
+         <div class="mb-3">
+            <label for="user">confirm Password</label>
+            <input type="text" class="form-control"id="user" name="user" value="{{user.user_id}}" readonly />
+         </div>
+         <a href="/users" class="btn btn-secondary float-end col-12 col-md-3">Back</a>
+       </form>
+    </div> 
+
+{% endblock content %}
+
+
+
+
+    
